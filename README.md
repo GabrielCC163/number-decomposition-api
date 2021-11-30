@@ -25,6 +25,8 @@ to find the divisors and primes:
 
 ### **/decomposition/:number**
 
+URL: https://number-decomposition-api.herokuapp.com/decomposition/45
+
 ---
 
 ## **Running tests**
