@@ -1,0 +1,26 @@
+{
+  "name": "number-decomposition-api",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "repository": "",
+  "author": "Gabriel Brum <gbrum.rodrigues@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "format": "npx prettier -w .",
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js --ignore tests",
+    "test": "jest"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-express": "^4.1.6"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "jest": "^27.0.5",
+    "nodemon": "^2.0.7",
+    "supertest": "^6.1.6"
+  }
+}

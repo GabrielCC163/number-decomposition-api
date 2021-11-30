@@ -1,0 +1,55 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Number Decomposition API",
+    "description": "Search for divisors and primes of a number",
+    "version": "1.0.0",
+    "contact": {
+      "email": "gbrum.rodrigues@gmail.com"
+    }
+  },
+  "paths": {
+    "/decomposition/{number}": {
+      "get": {
+        "tags": ["Requests"],
+        "summary": "Get divisors and primes of a number",
+        "parameters": [
+          {
+            "name": "number",
+            "in": "path",
+            "description": "number",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "divisors": {
+                      "type": "array",
+                      "example": [1, 3, 5, 9, 15, 45]
+                    },
+                    "primes": {
+                      "type": "array",
+                      "example": [3, 5]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          }
+        }
+      }
+    }
+  }
+}
